@@ -1,32 +1,30 @@
-🚀 ITlife — Modern IT School Platform
-<p align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:1e293b&height=200&section=header&text=ITlife&fontSize=60&fontColor=ffffff&animation=fadeIn" /> </p> <p align="center"> <b>Full-stack платформа для IT-школы</b><br/> FastAPI • Next.js • JWT • SQLAlchemy </p> <p align="center"> <img src="https://img.shields.io/badge/backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/> <img src="https://img.shields.io/badge/frontend-Next.js-black?style=for-the-badge&logo=next.js"/> <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/> <img src="https://img.shields.io/badge/database-SQLite-blue?style=for-the-badge&logo=sqlite"/> </p>
-🌐 О проекте
+🚀 ITlife
+<p align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:1e293b&height=180&section=header&text=ITlife&fontSize=60&fontColor=ffffff&animation=fadeIn" /> </p> <p align="center"> <b>Modern IT School Platform</b><br/> FastAPI • Next.js • TypeScript • JWT </p> <p align="center"> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white"/> <img src="https://img.shields.io/badge/Next.js-black?style=flat&logo=next.js"/> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white"/> <img src="https://img.shields.io/badge/SQLite-blue?style=flat&logo=sqlite"/> </p>
+🧠 About
 
-ITlife — это современная веб-платформа для онлайн IT-школы.
+ITlife — full-stack платформа для IT-школы.
 
-Платформа позволяет:
+Позволяет:
 
 📚 Просматривать курсы
 
-📝 Оставлять заявки на обучение
+📝 Оставлять заявки
 
-🔐 Авторизовываться через JWT
+🔐 Авторизоваться через JWT
 
 🛠 Управлять заявками через админ-панель
 
-⚡ Работать через REST API
+Архитектура построена по принципу разделения frontend и backend.
 
-Проект построен по принципу разделения frontend и backend.
-
-🏗 Архитектура
+🏗 Architecture
 Next.js (Frontend)
         ↓
 FastAPI REST API
         ↓
 SQLite (dev) / PostgreSQL (ready)
 
-🧰 Tech Stack
-🔹 Backend
+⚙️ Tech Stack
+Backend
 
 FastAPI
 
@@ -38,7 +36,7 @@ JWT Authentication
 
 SQLite
 
-🔹 Frontend
+Frontend
 
 Next.js (App Router)
 
@@ -46,9 +44,7 @@ TypeScript
 
 Tailwind CSS
 
-
-
-⚙️ Локальный запуск
+🚀 Local Setup
 Backend
 cd backend
 python -m venv .venv
@@ -80,28 +76,28 @@ npm run dev
 
 http://localhost:3000
 
-🔐 Админ-доступ
+🔐 Admin Access
 
-Админ создаётся автоматически при старте backend.
+Админ создаётся автоматически при старте backend:
 
 ADMIN_EMAIL=admin@gmail.com
 ADMIN_PASSWORD=admin12345
 
-✨ Функционал
+✨ Features
 
-CRUD курсов
+REST API
 
-Создание заявок
+JWT Authentication
 
-JWT авторизация
+Course Management
 
-Админ-панель
+Lead Management
 
-Сидирование базы
+Role separation
 
-Разделение ролей
+Auto database seed
 
-📈 Roadmap
+📌 Roadmap
 
 PostgreSQL
 
@@ -109,8 +105,6 @@ Docker
 
 CI/CD
 
-Продакшен деплой
+Production deployment
 
-Email-уведомления
-
-Платёжная интеграция
+Payment integration
