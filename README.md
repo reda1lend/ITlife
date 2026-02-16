@@ -59,3 +59,28 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
 
 
+### Swager
+
+```bash
+http://127.0.0.1:8000/docs
+
+
+---
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+
+---
+
+### 🔐 Доступ администратора
+
+ - ADMIN_EMAIL=admin@gmail.com
+ - admin12345
+
+---
+
+<p align="center"> © 2026 ITlife </p> ```
