@@ -9,7 +9,8 @@ router = APIRouter(prefix="/leads", tags=["leads"])
 
 @router.post("", response_model=LeadOut)
 def create_lead(payload: LeadCreate, db: Session = Depends(get_db)):
-    lead = Lead(**payload.model_dump())
+    data = payload.model_dump()
+    lead = Lead(**data)
     db.add(lead)
     db.commit()
     db.refresh(lead)

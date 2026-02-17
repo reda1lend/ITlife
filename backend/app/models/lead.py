@@ -10,7 +10,7 @@ class Lead(Base):
     name: Mapped[str] = mapped_column(String(120))
     contact: Mapped[str] = mapped_column(String(120))
     course_slug: Mapped[str] = mapped_column(String(220), index=True)
-    level: Mapped[str] = mapped_column(String(50), default="unknown")
+    age_category: Mapped[str] = mapped_column(String(50), default="6-10")
     message: Mapped[str] = mapped_column(Text, default="")
     status: Mapped[str] = mapped_column(String(50), default="new")
     admin_note: Mapped[str] = mapped_column(Text, default="")

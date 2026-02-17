@@ -5,7 +5,7 @@ class LeadCreate(BaseModel):
     name: str = Field(min_length=2, max_length=120)
     contact: str = Field(min_length=3, max_length=120)
     course_slug: str
-    level: str = "unknown"
+    age_category: str
     message: str = ""
 
 class LeadOut(BaseModel):
@@ -13,7 +13,7 @@ class LeadOut(BaseModel):
     name: str
     contact: str
     course_slug: str
-    level: str
+    age_category: str
     message: str
     status: str
     admin_note: str

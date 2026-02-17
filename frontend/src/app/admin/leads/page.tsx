@@ -66,7 +66,9 @@ export default function AdminLeads() {
             </div>
 
             <div className="mt-2 text-sm text-white/70">
-              Курс: <span className="text-white/90">{l.course_slug}</span> • Уровень: {l.level}
+              Курс: <span className="text-white/90">{l.course_slug}</span> • Возраст: {l.age_category}
+
+
             </div>
 
             {l.message && (
