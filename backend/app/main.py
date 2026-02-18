@@ -11,8 +11,42 @@ from app.api.routes.courses import router as courses_router
 from app.api.routes.leads import router as leads_router
 from app.api.routes.admin import router as admin_router
 
+import asyncio
+from datetime import datetime, timedelta, timezone
+from sqlalchemy import delete, and_
+
+from app.models.lead import Lead
+
+
+async def closed_leads_cleaner():
+    while True:
+        try:
+            cutoff = datetime.now(timezone.utc) - timedelta(hours=1)
+
+            with SessionLocal() as db:
+                db.execute(
+                    delete(Lead).where(
+                        and_(
+                            Lead.status == "closed",
+                            Lead.closed_at.is_not(None),
+                            Lead.closed_at <= cutoff,
+                        )
+                    )
+                )
+                db.commit()
+        except Exception as e:
+            print("Cleaner error:", e)
+
+        await asyncio.sleep(60)  # проверка раз в минуту
+
+
 def create_app() -> FastAPI:
     app = FastAPI(title=settings.APP_NAME)
+
+    async def on_startup():
+        asyncio.create_task(closed_leads_cleaner())
+
+    app.add_event_handler("startup", on_startup)
 
     app.add_middleware(
         CORSMiddleware,
