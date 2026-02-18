@@ -198,3 +198,10 @@ build/
 
 # OS
 .DS_Store
+
+
+
+node_modules
+.next
+.env.local
+.env
