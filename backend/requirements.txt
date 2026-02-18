@@ -9,3 +9,4 @@ python-multipart==0.0.9
 alembic==1.13.3
 psycopg[binary]
 psycopg2-binary
+email-validator
