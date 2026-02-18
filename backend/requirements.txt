@@ -10,3 +10,4 @@ alembic==1.13.3
 psycopg[binary]
 psycopg2-binary
 email-validator
+pydantic[email]
