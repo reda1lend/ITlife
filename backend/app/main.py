@@ -21,7 +21,7 @@ def create_app() -> FastAPI:
         allow_methods=["*"],
         allow_headers=["*"],
     )
-
+    Base.metadata.create_all(bind=engine)
     @app.on_event("startup")
     def on_startup():
         Base.metadata.create_all(bind=engine)
