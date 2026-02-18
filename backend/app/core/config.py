@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     SECRET_KEY: str = "change-me"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7
 
-    DATABASE_URL: str = "postgresql://postgres:owMftDNztvMersyfOrhgVfHeVQlUXxFr@postgres.railway.internal:5432/railway"
+    DATABASE_URL: str = "sqlite:///./itlife.db"
     ADMIN_EMAIL: str = "admin@gmail.com"
     ADMIN_PASSWORD: str = "admin12345"
 
