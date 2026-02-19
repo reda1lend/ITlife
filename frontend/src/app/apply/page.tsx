@@ -2,8 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { apiGet, apiPost } from "../../lib/api";
-import ... from "../../lib/auth";
-import ... from "../../lib/api";
 
 
 type Course = {
