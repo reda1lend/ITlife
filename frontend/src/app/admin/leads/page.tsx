@@ -7,7 +7,7 @@ import { getToken, clearToken } from "@/lib/auth";
 type Lead = {
   id: number; name: string; contact: string;
   course_slug: string; level: string; message: string;
-  status: string; admin_note: string; created_at: string;
+  status: string; admin_note: string; created_at: string; age_category?: string | null;
 };
 
 export default function AdminLeads() {
