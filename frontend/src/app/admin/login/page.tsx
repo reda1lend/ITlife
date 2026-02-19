@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { apiPost } from "../../../lib/api";
 import { setToken } from "../../../lib/auth";
+import ... from "../../../lib/auth";
+import ... from "../../../lib/api";
+
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("admin@itlife.school");
