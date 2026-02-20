@@ -58,6 +58,7 @@ def create_app() -> FastAPI:
 
     @app.on_event("startup")
     def on_startup():
+        print("CORS ORIGINS:", settings.cors_origins_list)
         Base.metadata.create_all(bind=engine)
         db = SessionLocal()
         try:
