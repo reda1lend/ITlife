@@ -1,6 +1,10 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import List
 
+@property
+def cors_origins_list(self):
+    return [origin.strip() for origin in self.CORS_ORIGINS.split(",")]
+
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
