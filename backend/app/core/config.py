@@ -11,10 +11,10 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7
 
     DATABASE_URL: str = "sqlite:///./itlife.db"
-    ADMIN_EMAIL: str = "admin@itlife.local"
+    ADMIN_EMAIL: str = "admin@gmail.com"
     ADMIN_PASSWORD: str = "admin12345"
 
-    CORS_ORIGINS: str = "http://localhost:3000"
+    CORS_ORIGINS: str = "https://itlife.vercel.app"
 
     @property
     def cors_origins_list(self) -> List[str]:
